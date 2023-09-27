@@ -1,32 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Halaman Registrasi</title>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Halaman Registrasi</title>
+        <style>
+            body {
+                background-image: url('https://c4.wallpaperflare.com/wallpaper/349/999/616/anime-black-clover-asta-black-clover-wallpaper-preview.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
     
-    <title>Halaman registrasi</title>
+            .container {
+                max-width: 1000px;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            }
+    
+            h1 {
+                text-align: center;
+                background-color: aqua;
+                padding: 10px;
+                border-radius: 5px;
+                color: #333;
+            }
+    
+            form {
+                text-align: left;
+            }
+    
+            label {
+                display: block;
+                font-weight:bolder;
+                margin-top: 10px;
+            }
+    
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            select {
+                width: 95%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            input[type="file"] {
+                width: 100%;
+                margin-top: 5px;
+            }
+    
+            button.rounded-button {
+                background-color: lightblue;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                color: #333;
+                cursor: pointer;
+            }
+    
+            button.rounded-button:hover {
+                background-color: #0099cc;
+            }
+        </style>
 </head>
-<body style="background-color:brown;">
-    <h1>HALAMAN REGISTRASI</h1>
-<br>
-    <form>
-<label for="email1"></label>EMAIL:</label>
-<input type="email" id="email1">
-<br><br>
-<label for="pass">PASSWORD:</label>
-<input type="password" id="pass">
-<br><br>
-<label for="gambar">MASUKKAN FOTO ANDA:</label>
-<input type="file" id="gambar">
-<br><br>
-<label for="tanggal">MASUKKAN TANGGAL LAHIR :</label>
-<input type="date" id="tanggal"  > 
-<br><br>
-<label for="Gender">Gender:</label>
-<select id="Gender" name="Gender">
-    <option value="Laki laki">LAKI LAKI</option>
-    <option value="Perempuan">PEREMPUAN</option>
-</select>
-<br><br>
-<button type="submit">SUBMIT GA SI </button>
-</form>
+<body>
+    <div class="container">
+        <h1>WARNET RUMAHAN 101</h1>
+        <form enctype="multipart/form-data" action="proses_registrasi.php" method="post">
+            <label for="email1">EMAIL:</label>
+            <input type="email" id="email1" name="email1">
+            <label for="pass">PASSWORD:</label>
+            <input type="password" id="pass" name="password">
+            <label for="gambar">MASUKKAN FOTO ANDA:</label>
+            <input type="file" id="gambar" name="gambar">
+            <label for="tanggal">MASUKKAN TANGGAL LAHIR:</label>
+            <input type="date" id="tanggal" name="tanggal_lahir">
+            <label for="Gender">Gender:</label>
+            <select id="Gender" name="Gender">
+                <option value="Laki laki">LAKI LAKI</option>
+                <option value="Perempuan">PEREMPUAN</option>
+            </select>
+            <button type="submit" class="rounded-button">SUBMIT GA SI</button>
+        </form>
+    </div>
 </body>
 </html>
